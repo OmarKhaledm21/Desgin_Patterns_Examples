@@ -13,6 +13,10 @@ public class CurrentConditionsDisplay implements DisplayElement, Observer{
         observable.addObserver( this);
     }
 
+    public void unsubscribe(){
+        observable.deleteObserver(this);
+    }
+
     public void update(Observable obs, Object arg) {
         if (obs instanceof WeatherData) {
             WeatherData weatherData = (WeatherData)obs;

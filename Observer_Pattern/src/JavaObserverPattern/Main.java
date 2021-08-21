@@ -8,5 +8,8 @@ public class Main {
         weatherData.setMeasurements(100,100,100);
         System.out.println("****************************************************");
 
+
+
+
     }
 }
