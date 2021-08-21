@@ -1,4 +1,9 @@
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
+    @Override
+    public void unsubscribe() {
+        weatherData.removeObserver(this);
+    }
+
     private float temperature;
     private float humidity;
     private Subject weatherData;
@@ -7,6 +12,7 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
         this.weatherData = weatherData;
         weatherData.registerObserver(this);
     }
+
 
     public void update(float temperature, float humidity, float pressure) {
         this.temperature = temperature;

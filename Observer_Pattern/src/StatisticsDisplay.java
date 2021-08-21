@@ -1,5 +1,10 @@
 
 public class StatisticsDisplay implements Observer, DisplayElement {
+    @Override
+    public void unsubscribe() {
+        weatherData.removeObserver(this);
+    }
+
     private float maxTemp = 0.0f;
     private float minTemp = 200;
     private float tempSum= 0.0f;

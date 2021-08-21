@@ -1,5 +1,10 @@
 
 public class ForecastDisplay implements Observer, DisplayElement {
+    @Override
+    public void unsubscribe() {
+        weatherData.removeObserver(this);
+    }
+
     private float currentPressure = 29.92f;
     private float lastPressure;
     private WeatherData_ConcreteSubject weatherData;
