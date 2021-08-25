@@ -1,6 +1,6 @@
 package ExampleFactoryMethod;
 
-public class EnemyShipFactoy {
+public class EnemyShipFactoy extends EnemyShip {
 
     public EnemyShip createEnemy(String enemyType){
         EnemyShip enemy = null;
