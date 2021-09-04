@@ -6,7 +6,7 @@ public class ExampleSingleton {
     private ExampleSingleton(){}
 
     //lazy construction of the instance.
-    public static ExampleSingleton getInstance(){
+    public static synchronized ExampleSingleton getInstance(){
         if(uniqueInstance==null){
             uniqueInstance = new ExampleSingleton();
         }
